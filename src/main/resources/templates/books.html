@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Hello Books!</h1>
+    </header>
+    <main>
+        <section id="catalog" >
+            <div class="container">
+                <table class="table table-dark table-hover table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Autor</th>
+                        </tr>
+                    </thead>
+                    <tbody th:each="book : ${books}">
+                        <tr>
+                            <td th:text="${book.id}"></td>
+                            <td th:text="${book.title}"></td>
+                            <td th:text="${book.author}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+                    </section>
+        <section id="search">
+
+        </section>
+        <section id="forms">
+
+        </section>
+        <section id="history">
+
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center position-absolute fixed-bottom">
+        <p>Made by Franco Ortiz</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
